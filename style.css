@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  /* background:linear-gradient(#ff5945,pink); */
+  background: linear-gradient(rgb(50, 50, 50), #eee);
+}
+.container{
+  position: relative;
+  width: 400px;
+  /* background: #4e4c4c; */
+  background:cadetblue;
+  padding: 20px 30px;
+  /* border: 1px solid ; */
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 5px 10px 20px black;
+}
+.exp-que{
+    color:#222;
+    font-size: 20px;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+}
+.container .edit{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color:rgb(47, 3, 89);
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .edit:hover{
+  text-decoration: underline;
+}
+.container .stars input{
+  display: none;
+}
+.stars label{
+  font-size: 30px;
+  color: #575555;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: rgb(248, 204, 6);
+}
+input:checked ~ label{
+  color: rgb(248, 204, 6);
+}
+input#star-5:checked ~ label{
+  color:rgb(248, 204, 6);
+  text-shadow: 0 0 20px #952;
+}
+#star-1:checked ~ form header:before{
+  content: "Worst!";
+}
+#star-2:checked ~ form header:before{
+  content: "Not Bad!";
+}
+#star-3:checked ~ form header:before{
+  content: "It can be Better!";
+}
+#star-4:checked ~ form header:before{
+  content: "Good! ";
+}
+#star-5:checked ~ form header:before{
+  content: "Excellent!";
+}
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: rgb(243, 202, 24);
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: black;
+  /* border: 1px solid #333; */
+  background: rgb(207, 203, 203);
+  padding: 10px;
+  font-size: 15px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+form .btn{
+  height: 45px;
+  width: 10vw;
+  margin: 15px 0;
+  margin-left: 6vw;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid #444; */
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background: rgb(5, 44, 46);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .btn button:hover{
+  background:rgb(190, 102, 39);
+} 
